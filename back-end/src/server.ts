@@ -1,6 +1,9 @@
 import express, {Request, Response}  from 'express'
 import cors from 'cors'
 import {config}  from 'dotenv'
+import { dbConnect } from './db/dbconnect'
+import { todoRouter } from './routes/todos'
+
 
 
 //dfefines
@@ -11,12 +14,17 @@ const PORT = process.env.PORT || 5000
 config()
 cors()
 
+//cal db connect
+dbConnect()
+
 //middlewares
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
 // routes
+
+app.use("/todos", todoRouter)
 
 //GET / 
 app.get('/', (req:Request, res:Response)=>{

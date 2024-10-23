@@ -1,0 +1,17 @@
+{
+  "name": "mern-todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run client\"  \"npm run server\" ",
+    "client": "cd front-end &&  npm run dev",
+    "server":"cd back-end && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
