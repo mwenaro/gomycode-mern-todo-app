@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000
 
 //loads env vars
 config()
-cors()
+app.use(cors())
 
 //cal db connect
 dbConnect()
