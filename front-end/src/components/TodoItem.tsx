@@ -11,11 +11,11 @@ console.log({_id, completed})
 
   return (
     <div className="flex items-center justify-between shadow mb-2 ">
-        <h3 className="first-letter:uppercase p-2">{title}</h3>
+        <h3 className="first-letter:uppercase p-2 text-lg">{title}</h3>
 
-        <div>
-            <Button className="bg-orange-600 py-2">Update</Button>
-            <Button className="bg-red-600 py-2">Delete</Button>
+        <div className="w-fit">
+            <Button className="bg-orange-600 py-2 px-4 text-sm">Update</Button>
+            <Button className="bg-red-600 py-2 px-4 text-sm">Delete</Button>
         </div>
     </div>
   )
